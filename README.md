@@ -1,4 +1,4 @@
-# Flappy Birds GamePanel
+# Flappy Birds
 
 This is a Java program for the Flappy Birds game. The program uses Java's Swing library to create a simple game panel where the player controls a bird to navigate through pipes.
 
