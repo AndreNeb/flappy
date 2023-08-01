@@ -1,37 +1,36 @@
-#Flappy Birds
+# Flappy Birds GamePanel
 
-#Features:
+This is a Java program for the Flappy Birds game. The program uses Java's Swing library to create a simple game panel where the player controls a bird to navigate through pipes.
 
-Simple and intuitive gameplay
-Beautifully designed graphics and background
-Smooth animations and fluid movement
-Score tracking with medals based on your performance
-Sound effects to enhance the gaming experience
-How to Play:
+## Code Overview
 
-Start the game by clicking/tapping on the screen or pressing any key.
-Control the bird's flight by tapping the screen or pressing any key repeatedly to make the bird flap its wings.
-Navigate the bird through the gaps between the pipes to earn points.
-Avoid hitting the pipes or the ground; otherwise, the game will end.
-The game ends when you collide with any obstacle or the ground.
-Your score will be displayed, and you can try to beat your high score in subsequent games.
-Collect enough points to earn different medals (bronze, silver, gold, or platinum).
-Technical Details:
-The game is implemented using Java's Swing library for graphics and user interface components. It utilizes multi-threading to manage animations and smooth gameplay. The core game logic is structured around various timers, key events, and mouse events to control the bird's movement and obstacle generation.
+The code consists of a class named `GamePanel`, which extends `JPanel` and implements several interfaces for various functionalities.
 
-Credits:
+### Fields
 
-The game graphics and sound effects are sourced from various free resources.
-Special thanks to the developers of the original Flappy Birds game for inspiring this project.
-Disclaimer:
-This game project is solely for educational and recreational purposes and is not intended for commercial use.
+The class has several boolean and integer fields to manage the game state, timers, images, and sound. These fields are used to control the game flow, keep track of the score, and manage game elements.
 
-Getting Started:
+### Initialization
 
-Clone or download the repository from GitHub.
-Make sure you have Java installed on your system.
-Compile and run the GamePanel.java file to start the game.
-Enjoy the Flappy Birds game and have fun beating your high score!
-Feel free to contribute to this project and make it even better! If you encounter any issues or have suggestions, please create a new issue on the GitHub repository.
+The constructor of the `GamePanel` class sets up the game window, loads images, initializes game elements, and starts the game loop on a separate thread.
 
-Happy gaming! 🐦🎮
+### Game Logic
+
+The game logic includes methods for checking user input, updating game objects, and handling collisions. The `run()` method runs the game loop, which repeatedly computes delta time, updates game logic, and repaints the panel.
+
+### Graphics
+
+The `paintComponent(Graphics g)` method is responsible for rendering the game elements on the panel. It draws background images, sprites, and other visual elements.
+
+## How to Play
+
+- Use the mouse to control the bird's movement. Click to make the bird flap and avoid collisions with pipes.
+- When the game starts, the bird will automatically move downwards. Click the mouse to make it fly up and pass through the gaps between pipes.
+- Collect points by passing through the gaps between pipes. The score is displayed in the top-right corner of the screen.
+- The game ends if the bird collides with the ground or pipes. A game-over screen will be displayed, showing your final score and a medal based on your performance.
+
+## Conclusion
+
+This Java program demonstrates a simple implementation of the Flappy Birds game using Swing. The code can be customized and extended to add more features, levels, or animations to create a richer gaming experience.
+
+To play the game, run the `main()` method of the `GamePanel` class. Enjoy the game and happy coding!
